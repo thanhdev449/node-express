@@ -1,0 +1,45 @@
+extends ./../main-layouts/main
+block content
+    .jumbotron
+        h1.display-4 List User
+        table.table.mt-3
+            thead
+                tr.table-success
+                th(scope='col') #
+                th(scope='col') Name
+                th(scope='col') Email
+                th(scope='col') Age
+                th(scope='col') Adress
+                th(scope='col') Avatar
+                th(scope='col') Action
+            tbody
+                tr.table-light
+                th(scope='row') 1
+                td Mark
+                td Otto@gmail.com
+                td 20
+                td SaiGon
+                td Avatar
+                td 
+                    a.btn.btn-primary(href='/edit') edit
+                    a.btn.btn-danger(href='/dele') delete 
+                tr.table-light
+                th(scope='row') 2
+                td Mark
+                td Otto@gmail.com
+                td 20
+                td SaiGon
+                td Avatar
+                td 
+                    a.btn.btn-primary(href='/edit') edit
+                    a.btn.btn-danger(href='/dele') delete 
+                tr.table-light
+                th(scope='row') 3
+                td Mark
+                td Otto@gmail.com
+                td 20
+                td SaiGon
+                td Avatar
+                td 
+                    a.btn.btn-primary(href='/edit') edit
+                    a.btn.btn-danger(href='/dele') delete 

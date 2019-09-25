@@ -1,0 +1,26 @@
+extends ./../main-layouts/main
+block content
+    .jumbotron
+        h1.display-3 #{title} User
+        hr.my-4
+        form(action='/users/postAdd', method='post')
+            .form-group
+                label(for='exampleInputEmail1') Email address
+                input#exampleInputEmail1.form-control(type='email', name='email' aria-describedby='emailHelp', placeholder='Enter email')
+                small#emailHelp.form-text.text-muted We&apos;ll never share your email with anyone else.
+            .form-group
+                label(for='exampleInputPassword1') Password
+                input#exampleInputPassword2.form-control(type='password', name='Password' placeholder='Password')
+            .form-group
+                label(for='exampleInputPassword1') FullName
+                input#exampleInputPassword3.form-control(type='text', name='name' placeholder='FullName')
+            .form-group
+                label(for='exampleInputPassword1') Age
+                input#exampleInputPassword4.form-control(type='text', name='age' placeholder='Age')
+            .form-group
+                label(for='exampleInputPassword1') Address
+                input#exampleInputPassword5.form-control(type='text', name='address' placeholder='Address')
+            .form-group
+                label(for='exampleInputPassword1') Avatar
+                input#exampleInputPassword6.form-control(type='file', name='avatar' placeholder='Avatar')
+            button.btn.btn-primary(type='submit') Submit

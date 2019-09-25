@@ -1,13 +1,19 @@
+var userModel = require('./../models/user.model');
+
 module.exports.index = function(req,res,next){
-    res.send('hello world');
+    var dataUser = userModel.find();
+    console.log(dataUser);
+    console.log(process.env.MONGO_URI);
+    res.render('./users/list');
 }
 
 module.exports.create = function(req,res,next){
-    res.send('hello world1');
+    res.render('./users/create');
 }
 
 module.exports.postCreate = function(req,res,next){
-    res.send('hello world2');
+    res.send(req.body);
+    console.log(req.body);
 }
 
 module.exports.edit = function(req,res,next){
