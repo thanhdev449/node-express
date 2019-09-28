@@ -7,7 +7,7 @@ module.exports.create = function(req,res,next){
 }
 
 module.exports.postCreate = function(req,res,next){
-    res.send('hello world2');
+    res.send('hello world20');
 }
 
 module.exports.edit = function(req,res,next){
