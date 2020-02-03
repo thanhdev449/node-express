@@ -11,7 +11,7 @@ module.exports.index = function(req,res,next){
                 i++;
                 return {id : res._id,index:i,name:res.name,email: res.email,age: res.age,address: res.address,avatar: res.avatar}
             })
-            //console.log(dataRes);
+            console.log(dataRes);
             res.render('users/list',{dataUser:dataRes});
         }
     });
