@@ -7,8 +7,8 @@ var userSchema = mongoose.Schema({
     address : String,
     age : Number,
     avatar : String,
-})
+},{collection:'user'})
 
-var userModel = mongoose.model('User', userSchema , 'users')
+var userModel = mongoose.model('users', userSchema , 'users')
 
 module.exports = userModel;

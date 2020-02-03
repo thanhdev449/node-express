@@ -13,33 +13,40 @@ block content
                 th(scope='col') Avatar
                 th(scope='col') Action
             tbody
-                tr.table-light
-                th(scope='row') 1
-                td Mark
-                td Otto@gmail.com
-                td 20
-                td SaiGon
-                td Avatar
-                td 
-                    a.btn.btn-primary(href='/edit') edit
-                    a.btn.btn-danger(href='/dele') delete 
-                tr.table-light
-                th(scope='row') 2
-                td Mark
-                td Otto@gmail.com
-                td 20
-                td SaiGon
-                td Avatar
-                td 
-                    a.btn.btn-primary(href='/edit') edit
-                    a.btn.btn-danger(href='/dele') delete 
-                tr.table-light
-                th(scope='row') 3
-                td Mark
-                td Otto@gmail.com
-                td 20
-                td SaiGon
-                td Avatar
-                td 
-                    a.btn.btn-primary(href='/edit') edit
-                    a.btn.btn-danger(href='/dele') delete 
+                each item in dataUser
+                    tr.table-light
+                    th(scope='row') 
+                        = item.index 
+                    td 
+                        = item.name
+                    td 
+                        = item.email
+                    td 
+                        = item.age
+                    td 
+                        = item.address
+                    td 
+                        = item.avatar
+                    td 
+                        a.btn.btn-primary(href='/users/edit/'+item.id) edit
+                        a.btn.btn-danger(href='/users/dele/'+item.id) delete 
+                //- tr.table-light
+                //- th(scope='row') 2
+                //- td Mark
+                //- td Otto@gmail.com
+                //- td 20
+                //- td SaiGon
+                //- td Avatar
+                //- td 
+                //-     a.btn.btn-primary(href='/edit') edit
+                //-     a.btn.btn-danger(href='/dele') delete 
+                //- tr.table-light
+                //- th(scope='row') 3
+                //- td Mark
+                //- td Otto@gmail.com
+                //- td 20
+                //- td SaiGon
+                //- td Avatar
+                //- td 
+                //-     a.btn.btn-primary(href='/edit') edit
+                //-     a.btn.btn-danger(href='/dele') delete 

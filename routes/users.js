@@ -5,7 +5,7 @@ var controller = require('../controllers/user.controller');
 router.get('/', controller.index);
 router.get('/add', controller.create);
 router.post('/postAdd', controller.postCreate);
-router.post('/edit', controller.edit);
+router.get('/edit/:id_detail', controller.edit);
 router.post('/postEdit', controller.postEdit);
 router.post('/delete', controller.delete);
 
