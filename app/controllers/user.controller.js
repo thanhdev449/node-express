@@ -1,6 +1,13 @@
 var userModel = require('./../models/user.model');
 //var mongoose = require('mongoose');
-module.exports.index = function(req,res,next){
+module.exports.index = async function(req,res,next){
+    
+    // try {
+        
+    // } catch (error) {
+        
+    // }
+
     userModel.find(function(err,data){
         if (err) {
             console.log(err);

@@ -1,11 +1,13 @@
 var createError = require('http-errors');
 var express = require('express');
+var colors = require('colors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var mongoose = require('mongoose');
+var connectDB = require('./config/db');
 
-mongoose.connect('mongodb://mongo/node-express-1', {useNewUrlParser: true,useUnifiedTopology: true, useFindAndModify: false });
+//mongoose.connect('mongodb://localhost/node-express-1', {useNewUrlParser: true,useUnifiedTopology: true, useFindAndModify: false });
+connectDB();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
