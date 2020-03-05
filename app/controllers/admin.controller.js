@@ -20,7 +20,7 @@ module.exports.index = async function(req,res,next){
                     error : null
                 })
             }
-        })
+        }).exec();
     } catch (error) {
         return res.status(500).json({
             success : false,
